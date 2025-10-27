@@ -16,7 +16,7 @@ Genify is an AI-powered image generation SaaS web application built with the MER
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Eshwarsai-07/Genigy.git
+git clone (https://github.com/Dhanush552005/Genify.git)
 ```
 
 2. Navigate to the project directory:
