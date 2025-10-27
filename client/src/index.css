@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font */
+* {
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+/* Placeholder color for dark theme */
+.ph-color {
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+/* Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Glassy effect helper */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+}
+
+/* Buttons with gradient hover effect */
+.btn-gradient {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+}
+
+/* Headings with gradient text */
+.heading-gradient {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating cards shadow and hover effect */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+/* Animated progress bar */
+@keyframes progress {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  animation: progress 8s linear forwards;
+}
+
+/* Subtle floating animation for images/icons */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Responsive utility tweaks */
+@media (max-width: 640px) {
+  .heading-gradient {
+    font-size: 1.8rem;
+  }
+}
